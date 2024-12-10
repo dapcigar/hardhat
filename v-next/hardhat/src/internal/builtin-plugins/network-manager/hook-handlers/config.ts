@@ -241,7 +241,7 @@ export async function resolveUserConfig(
         ),
         hardfork: networkConfig.hardfork ?? "cancun",
         networkId: networkConfig.networkId ?? networkConfig.chainId ?? 31337,
-        blockGasLimit: BigInt(networkConfig.blockGasLimit ?? 12_500_000),
+        blockGasLimit: BigInt(networkConfig.blockGasLimit ?? 30_000_000),
         minGasPrice: BigInt(networkConfig.minGasPrice ?? 0),
         mining: resolveMiningConfig(networkConfig.mining),
         chains: networkConfig.chains ?? new Map(),
