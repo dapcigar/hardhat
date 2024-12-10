@@ -169,13 +169,13 @@ export class EdrProvider extends EventEmitter implements EthereumProvider {
             : undefined,
         minGasPrice: networkConfig.minGasPrice,
         mining: {
-          autoMine: networkConfig.automine,
+          autoMine: networkConfig.mining.auto,
           interval: ethereumjsIntervalMiningConfigToEdr(
-            networkConfig.intervalMining,
+            networkConfig.mining.interval,
           ),
           memPool: {
             order: ethereumjsMempoolOrderToEdrMineOrdering(
-              networkConfig.mempoolOrder,
+              networkConfig.mining.mempool.order,
             ),
           },
         },
